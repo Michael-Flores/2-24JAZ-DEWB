@@ -12,16 +12,22 @@ echo "<table style='border-collapse: collapse;'>";
 for ($i = 1; $i <= $fila; $i++) {
     //imprimimos un tr que es parte de la tabla
     echo "<tr>";
+    //se crea un ciclo for donde  j inicia en 1  y j es menor igual a la columna  
     for ($j = 1; $j <= $columna; $j++) {
-        // Alternar colores de las celdas (blanco y rojo)
+        // se hace una condicional para alternar colores aqui se pregunta si la suma de j+i su modulo entre 2 es igaual a 0
+        //entonses en la variable color se guarda el color blamco 
         if (($i + $j) % 2 == 0) {
             $color = "#FFFFFF";  // Blanco
         } else {
-            $color = $colo;  // Rojo
+            //por falso se guarda el color que recuperameos 
+            $color = $colo;  
         }
 
-        // Resaltar la celda seleccionada con la imagen y el color personalizado
+        // se crea las filas y columnas del tablero  y se coloca la imagen con el color   y se hace una condicional
+        //se pregunta si i es igual ala posision n filas que recuperamos  y si j es igual ala ncolumnas que recuperamos
+        //si cumple  entonses esntra
         if ($i == $nfila && $j == $ncolumna) {
+            //inprimimos  la tabla identificada en sus posiciones  
             echo "<td style='background-color:#FFC000;'>
                     <img src='img/Bowser.png' width='50px'>
                   </td>";
